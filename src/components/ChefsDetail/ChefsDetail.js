@@ -1,17 +1,9 @@
-import Image from "next/image";
-
 export default function ChefsDetail() {
   return (
     <div className="bg-gray-200 p-4 rounded-lg hover:bg-orange-200 hover:shadow-md hover:shadow-black/25 transition-all">
       <div className="flex items-center">
         <div className="w-1/3">
-          <Image
-            src="/Chef1.png"
-            width={150}
-            height={100}
-            className="h-60 mx-auto"
-            alt="Order Biryani"
-          />
+          <img src="/Chef1.png" className="h-60 mx-auto" alt="Order Biryani" />
         </div>
         <div className="w-2/3 pl-4 text-left">
           <h4 className="font-bold text-lg text-center my-1.5 text-black">
