@@ -26,7 +26,7 @@ export function AppProvider({ children }) {
     if (ls && ls.getItem("cart")) {
       setCartProducts(JSON.parse(ls.getItem("cart")));
     }
-  }, []); // Run once on component mount
+  }, [ls]); // Run once on component mount
 
   function saveCartProductsToLocalStorage(cartProducts) {
     if (ls) {

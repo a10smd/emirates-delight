@@ -11,7 +11,7 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
   return (
     <div className="bg-gray-200 p-4 rounded-xl text-center group hover:bg-orange-200 hover:shadow-md hover:shadow-black/25 transition-all">
       <div>
-        <img
+        <Image
           src={image}
           className=" max-h-full h-60 block mx-auto border rounded-xl"
           alt="Image"

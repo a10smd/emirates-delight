@@ -27,12 +27,12 @@ export default function OrderPage() {
         });
       });
     }
-  }, []);
+  }, [id, clearCart]);
 
   let subtotal = 0;
   if (order?.cartProducts) {
     for (const product of order?.cartProducts) {
-        subtotal += cartProductPrice(product);
+      subtotal += cartProductPrice(product);
     }
   }
 
@@ -45,31 +45,34 @@ export default function OrderPage() {
           <p>We will contact you when your order is on the way.</p>
         </div>
       </div>
-      
-      {loadingOrder && (
-        <div>Loading Order...</div>
-      )}
+
+      {loadingOrder && <div>Loading Order...</div>}
       {order && (
         <div className="grid md:grid-cols-2 md:gap-16">
-        
           <div>
-            {order.cartProducts.map(product => (
-                <CartProduct key={product._id} product={product} />
+            {order.cartProducts.map((product) => (
+              <CartProduct key={product._id} product={product} />
             ))}
             <div className="text-right py-2 text-gray-500">
-                Subtotal:
-                <span className="text-black font-bold inline-block w-6 ml-2">${subtotal}</span>
-                <br />
-                Delivery:
-                <span className="text-black font-bold inline-block w-6 ml-2">$5</span>
-                <br />
-                Total:
-                <span className="text-black font-bold inline-block w-6 ml-2">${subtotal + 5}</span>
+              Subtotal:
+              <span className="text-black font-bold inline-block w-6 ml-2">
+                ${subtotal}
+              </span>
+              <br />
+              Delivery:
+              <span className="text-black font-bold inline-block w-6 ml-2">
+                $5
+              </span>
+              <br />
+              Total:
+              <span className="text-black font-bold inline-block w-6 ml-2">
+                ${subtotal + 5}
+              </span>
             </div>
           </div>
           <div>
             <div className="bg-gray-100 p-4 rounded-xl">
-                <AddressInputs disabled={true} addressProps={...order}/>
+              <AddressInputs disabled={true} addressProps={order} />
             </div>
           </div>
         </div>
