@@ -7,6 +7,8 @@ export default function ChefsDetail() {
         <div className="w-1/3">
           <Image
             src="/Chef1.png"
+            width={150}
+            height={100}
             className="h-60 mx-auto"
             alt="Order Biryani"
           />

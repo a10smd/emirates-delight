@@ -13,6 +13,8 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
       <div>
         <Image
           src={image}
+          width={300}
+          height={300}
           className=" max-h-full h-60 block mx-auto border rounded-xl"
           alt="Image"
         />
