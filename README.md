@@ -8,7 +8,7 @@
 
 <p align="center"><img src="https://i.imghippo.com/files/ofICG1714553105.png" alt="project-screenshot" width="400" height="200/"></p><br />
 
-<p align="center"><img src="https://i.imghippo.com/files/2iON01714553140.png" alt="project-screenshot" width="200" height="400/"></p>
+<p align="center"><img src="https://i.imghippo.com/files/2iON01714553140.png" alt="project-screenshot" width="400" height="200/"></p>
 
 <h2>🧐 Features</h2>
 
